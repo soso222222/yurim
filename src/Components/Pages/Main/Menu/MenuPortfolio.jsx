@@ -1,3 +1,4 @@
+import Portfolio from "../../Portfolio/Portfolio";
 
 
 /**
@@ -7,7 +8,7 @@ export const MenuPortfolio = {
     title: "작업물",
     url: "/portfolio",
     isHidden: false,
-    // el: <tempPage />,
+    el: <Portfolio />,
     // depth: [
     //     {
     //         title: "Color",

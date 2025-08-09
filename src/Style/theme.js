@@ -43,10 +43,11 @@ const colors = {
   //   CoverBlackOpacity07: "rgba(51, 51, 51, 0.7)",
   CoverGreenOpacity05: "rgba(75, 86, 75, 0.5)", //이미지 위에 덮을 색상
 
-  Gray700Opacity10: "rgba(102, 102, 102, 1)",
-  Gray300Opacity10: "rgba(170, 170, 170, 1)",
+  Gray700Opacity10: "rgba(102, 102, 102, 1)", //#AAAAAA
+  Gray300Opacity10: "rgba(170, 170, 170, 1)", //#666666
 
   Green700Opacity10: "rgba(6, 43, 4, 1)",
+  Green700Opacity08: "rgba(6, 43, 4, 0.8)",
   Green700Opacity03: "rgba(6, 43, 4, 0.3)",
 };
 
@@ -107,6 +108,7 @@ const button = {
 };
 
 const theme = {
+  deviceSizes,
   colors,
   elevation,
   modal,

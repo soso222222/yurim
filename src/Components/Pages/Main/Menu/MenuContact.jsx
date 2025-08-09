@@ -1,3 +1,4 @@
+import Contact from "../../Contact/Contact";
 
 
 /**
@@ -7,7 +8,7 @@ export const MenuContact = {
     title: "문의하기",
     url: "/contact",
     isHidden: false,
-    // el: <tempPage />,
+    el: <Contact />,
     // depth: [
     //     {
     //         title: "Color",

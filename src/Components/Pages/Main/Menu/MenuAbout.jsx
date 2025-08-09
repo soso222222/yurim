@@ -1,3 +1,4 @@
+import About from "../../About/About";
 
 
 /**
@@ -7,7 +8,7 @@ export const MenuAbout = {
     title: "소개",
     url: "/about",
     isHidden: false,
-    // el: <tempPage />,
+    el: <About />,
     // depth: [
     //     {
     //         title: "Color",

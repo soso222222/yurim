@@ -23,6 +23,7 @@ const GlobalStyle = createGlobalStyle`
     --Gray300Opacity10:${(props) => props.theme.colors.Gray300Opacity10};
     
     --Green700Opacity10:${(props) => props.theme.colors.Green700Opacity10};
+    --Green700Opacity08:${(props) => props.theme.colors.Green700Opacity08};
     --Green700Opacity03:${(props) => props.theme.colors.Green700Opacity03};
 
     --Elevation_001:${(props) => props.theme.elevation.Elevation__001};

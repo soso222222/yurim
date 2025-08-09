@@ -4,6 +4,7 @@ import { TitleText, SubText } from "./styled.Title";
 const Title = ({ 
     title = "",
     subTxt,
+    align = "start", 
     gap = 12, 
     margin = "0",
     padding = "0",
@@ -12,9 +13,9 @@ const Title = ({
     subSize = 18,
 }) => {
     return (
-        <Wrapper margin={margin} padding={padding}>
-            {subTxt && <SubText gap={gap} subColor={subColor} subSize={subSize}>{subTxt}</SubText>}
-            <TitleText titleSize={titleSize}>{title}</TitleText>
+        <Wrapper className={"titlebox"} margin={margin} padding={padding} align={align}>
+            {subTxt && <SubText className={"subtxt"} gap={gap} subColor={subColor} subSize={subSize}>{subTxt}</SubText>}
+            <TitleText className={"titletxt"} titleSize={titleSize}>{title}</TitleText>
         </Wrapper>
     );
 };

@@ -1,8 +1,11 @@
 import styled, { css } from "styled-components";
 
 export const Wrapper = styled.div`
-  ${({ margin, padding }) => {
+  ${({ margin, padding, align }) => {
     return css`
+      display: flex;
+      flex-direction: column;
+      align-items: ${align};
       margin: ${margin};
       padding: ${padding};
     `;
@@ -21,7 +24,7 @@ export const SubText = styled.p`
 `;
 
 export const TitleText = styled.p`
-  ${({ theme: { colors }, titleSize }) => {
+  ${({ titleSize }) => {
     return css`
       font-size: ${titleSize}rem;
     `;
