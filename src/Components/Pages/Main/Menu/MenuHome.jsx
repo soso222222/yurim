@@ -6,7 +6,7 @@ import Home from "../Home/Home";
  */
 export const MenuHome = {
     title: "홈",
-    url: "/home",
+    url: "",
     isHidden: false,
     el: <Home />,
     // depth: [
