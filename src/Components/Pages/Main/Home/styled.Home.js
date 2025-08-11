@@ -56,7 +56,7 @@ export const MainImage = styled.img`
 
 export const MainImageImageBottom = styled.div`
   position: absolute;
-  left: calc(50% - 50rem);
+  left: calc(50% - 100rem);
   bottom: 40rem;
   width: 100rem;
   display: flex;
