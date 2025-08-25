@@ -1,22 +1,25 @@
 import styled, { css } from "styled-components";
 
 export const Wrapper = styled.button`
-  ${({ theme: { button, colors }, themeName, bg, size, width }) => {
-    const themeProps = button.theme[themeName];
-    const themePropHover = button.theme[themeName].hover;
+  ${({ theme: { icon, button, colors }, themeName, bg, size, width, iconType }) => {
+    const themeProps = iconType ? icon.theme[themeName] : button.theme[themeName];
+    const themePropHover = iconType ? icon.theme[themeName].hover : button.theme[themeName].hover;
     const themeBtn = button.size[size];
+    const borderColor = iconType ? "transparent" : colors.Border10;
+    const borderRadius = iconType ? "0" : "100rem";
+    const minWidth = iconType ? width : "50rem";
 
     return css`
       display: inline-block;
       position: relative;
-      min-width: 50rem;
+      min-width: ${minWidth};
       ${width && `width: ${width}rem;`}
-      border: 1px solid ${colors.Border10};
+      border: 1px solid ${borderColor};
       background: transparent;
       ${themeProps}
       ${themeBtn}
       ${bg && `background-color: ${bg}`};
-      border-radius: 100rem;
+      border-radius: ${borderRadius};
       vertical-align: middle;
       text-align: center;
       cursor: pointer;

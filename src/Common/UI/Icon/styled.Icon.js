@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { isNum } from "../../Utils/common";
 
 export const Svg = styled.svg`
-  ${({ size, fill, theme: { colors } }) => {
+  ${({ size, fill, theme: { icon, colors } }) => {
     return ` 
-        width: ${isNum(size) ? size + "rem" : size};
+        width: ${icon.size[size].width};
+        height: ${icon.size[size].width};
         fill: ${fill ? fill : colors.TextOpacity10};
         text-indent: 0;
         display: flex;

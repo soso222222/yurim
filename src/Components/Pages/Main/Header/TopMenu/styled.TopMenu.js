@@ -7,27 +7,18 @@ export const Nav = styled.nav`
   .ItemBox {
     display: flex;
   }
-  .ItemBoxM {
+  .ItemBoxContainerM {
     display: none;
   }
   @media screen and (max-width: ${mediaScreenWidth}) {
     .ItemBox {
       display: none;
     }
-    .ItemBoxM {
+    .ItemBoxContainerM {
       display: flex;
     }
   }
 `;
-
-// export const Nav = styled.nav`
-//   ${({ theme: { colors } }) => {
-//     return css`
-//       color: ${colors.Orange08};
-//     `;
-//   }}
-// `;
-
 
 
 export const ItemBox = styled.ul`
@@ -54,5 +45,32 @@ export const ItemBoxContainerM = styled.div`
 
 
 export const ItemBoxM = styled.ul`
+  ${({ theme: { colors }, isActive }) => {
+    return ` 
+        position: fixed;
+        top: 0;
+        right: ${isActive ? "0" : "-78%"};
+        width: calc(78% - 66rem);
+        display: flex;
+        // align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 24rem 24rem 24rem 42rem;
+        background-color: ${colors.White};
+        z-index: 400;
+        transition: all 0.7s ease-out;
+        `;
+  }}
+`;
+
+export const ItemM = styled.li`
+  display: flex;
+  align-items: center;
+  height: 90rem;
+  font-size: 26rem;
   
+  &:first-child {
+    height: 64rem;
+    justify-content: end;
+  }
 `;

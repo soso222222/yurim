@@ -107,6 +107,76 @@ const button = {
   },
 };
 
+
+
+const icon = {
+  size: {
+    xxxxxxxxs: {
+      width: "6rem",
+    },
+    xxxxxxxs: {
+      width: "8rem",
+    },
+    xxxxxxs: {
+      width: "12rem",
+    },
+    xxxxxs: {
+      width: "16rem",
+    },
+    xxxxs: {
+      width: "20rem",
+    },
+    xxxs: {
+      width: "24rem",
+    },
+    xxs: {
+      width: "28rem",
+    },
+    xs: {
+      width: "32rem",
+    },
+    sm: {
+      width: "36rem",
+    },
+    md: {
+      width: "40rem",
+    },
+    lg: {
+      width: "44rem",
+    },
+    xl: {
+      width: "48rem",
+    },
+    xxl: {
+      width: "52rem",
+    },
+    xxxl: {
+      width: "56rem",
+    },
+  },
+  theme: {
+    normal: {
+      color: colors.Black08,
+      background: colors.White08,
+      fill: colors.White,
+      hover: {
+        // background: colors.LogoBg10,
+      },
+      active: {
+        // background: colors.Gray08,
+      },
+      focus: {
+        // background: colors.LogoBg10,
+      },
+      disabled: {
+        color: colors.White,
+        background: colors.Gray300Opacity10,
+        fill: colors.Gray300Opacity10,
+      },
+    },
+  },
+};
+
 const theme = {
   deviceSizes,
   colors,
@@ -114,6 +184,7 @@ const theme = {
   modal,
   title,
   button,
+  icon,
 };
 
 export default theme;

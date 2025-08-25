@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
 import { Wrapper } from "./styled.Button";
 import { useNavigate } from "react-router-dom";
+import Icon from "../Icon/Icon";
 
 const Button = forwardRef(
     (
@@ -13,6 +14,7 @@ const Button = forwardRef(
             width,
             to,
             bg,
+            icon,
         },
         ref
     ) => {
@@ -24,12 +26,13 @@ const Button = forwardRef(
             size={size}
             width={width}
             bg={bg}
+            iconType={icon}
             onClick={(e) => {
                 to ? navigate(to) : onClick && onClick(e);
                 e.stopPropagation();
             }}
         >
-            {children}
+            {icon ? <Icon type={icon} size={size} /> : children}
             </Wrapper>
         );
     }
