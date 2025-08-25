@@ -1,9 +1,16 @@
+import SectionCategory from "./SectionCategory";
+import SectionIntro from "./SectionIntro";
+import SectionIntroImg from "./SectionIntroImg";
+import SectionProcess from "./SectionProcess";
 import { Wrapper } from "./styled.About";
 
 function About() {
     return (
         <Wrapper>
-            About
+            <SectionIntro />
+            <SectionCategory />
+            <SectionIntroImg />
+            <SectionProcess />
         </Wrapper>
     );
 }

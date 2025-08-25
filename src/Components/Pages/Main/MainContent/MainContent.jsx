@@ -8,18 +8,11 @@ function MainContent({ list }) {
             <Routes>
                 {list.map(({ url, el, depth }, idx) => {
                     return (
-                        <>
-                            <Route
-                            key={idx}
-                            path={`${url}/*`}
-                            element={el}
-                            />
-                            {/* {depth?.map(({ url: durl, el: dEl }, dIdx) => (
-                                <Route key={dIdx}
-                                path={`${url}${durl}/*`}
-                                element={dEl} />
-                                ))} */}
-                        </>
+                        <Route
+                        key={idx}
+                        path={`${url}/*`}
+                        element={el}
+                        />
                     );
                 })}
             </Routes>

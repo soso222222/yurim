@@ -12,12 +12,12 @@ export const Wrapper = styled.button`
     return css`
       display: inline-block;
       position: relative;
-      min-width: ${minWidth};
+      min-width: ${themeName === "text" ? "0" : minWidth};
       ${width && `width: ${width}rem;`}
       border: 1px solid ${borderColor};
       background: transparent;
-      ${themeProps}
       ${themeBtn}
+      ${themeProps}
       ${bg && `background-color: ${bg}`};
       border-radius: ${borderRadius};
       vertical-align: middle;

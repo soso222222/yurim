@@ -51,9 +51,10 @@ export const ItemBoxM = styled.ul`
         top: 0;
         right: ${isActive ? "0" : "-78%"};
         width: calc(78% - 66rem);
+        height: 100vh;
         display: flex;
         // align-items: center;
-        justify-content: center;
+        // justify-content: center;
         flex-direction: column;
         padding: 24rem 24rem 24rem 42rem;
         background-color: ${colors.White};

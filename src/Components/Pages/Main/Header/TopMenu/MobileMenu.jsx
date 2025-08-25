@@ -14,7 +14,7 @@ function MobileMenu({
         <ItemBoxM isActive={isActive}>
             <ItemM><Button icon={"cross"} onClick={onClick} size={"xxxxs"} /></ItemM>
             {menuDeafult.map(({url, title}, idx) => (
-                <ItemM key={idx}><Link to={url}>{title}</Link></ItemM>
+                <ItemM key={idx}><Button themeName={"text"} size={"xl"} onClick={onClick} to={url}>{title}</Button></ItemM>
             ))}
         </ItemBoxM>
     );

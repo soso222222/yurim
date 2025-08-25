@@ -1,14 +1,24 @@
 import styled, { css } from "styled-components";
 
 export const Wrapper = styled.div`
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+  ${({ theme: { colors }, isActive }) => {
+    return css`
+      display: ${isActive ? "flex" : "none"};
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      left: 0;
+      top: 0;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+      transition: opacity 0.2s ease-in;
+      opacity: 0;
+      background-color: ${colors.TextOpacity08};
+
+      &.active {
+        opacity: 1;
+      }
+    `;
+  }}
 `;

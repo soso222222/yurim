@@ -6,15 +6,13 @@ function Overlays({
     timer,
     children,
     isActive,
-    isOuterDelete,
     onClose,
-    zIndex,
 }) {
     const ref = useRef();
 
     const onClick = (e) => {
         const { target } = e;
-        if (target === ref.current && !isOuterDelete) {
+        if (target === ref.current) {
             ref?.current?.classList.remove("active");
             onClose();
         }
@@ -25,13 +23,13 @@ function Overlays({
         }, timer);
     };
     useEffect(() => {
+        
         const root = document.getElementById("root");
         const body = document.getElementsByTagName("body")[0];
         if (isActive) {
             toggleActive();
             const focusEl = document.activeElement;
             root.style.overflow = "hidden";
-            body.style.paddingRight = "4rem";
             focusEl.blur();
         } else if (!isActive) {
             root.style.overflow = "";
@@ -46,8 +44,8 @@ function Overlays({
         <Wrapper
             className={className}
             onClick={(e) => onClick(e)}
-            zIndex={zIndex}
             isActive={isActive}
+            ref={ref}
         >
             {children || undefined}
         </Wrapper>
@@ -55,7 +53,6 @@ function Overlays({
 }
 
 Overlays.defaultProps = {
-    blur: true,
     isActive: false,
     zIndex: 300,
     timer: 100,

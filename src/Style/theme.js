@@ -30,15 +30,15 @@ const colors = {
   White: "#fff",
   Transparent: "transparent",
 
-  TextOpacity10: "rgba(30, 30, 30, 1)",
+  TextOpacity10: "rgba(30, 30, 30, 1)", //#1E1E1E
   TextOpacity08: "rgba(30, 30, 30, 0.8)",
   TextOpacity07: "rgba(30, 30, 30, 0.7)",
   TextOpacity05: "rgba(30, 30, 30, 0.5)",
   TextOpacity03: "rgba(30, 30, 30, 0.3)",
 
-  BorderOpacity10: "rgba(203, 203, 203, 1)",
+  BorderOpacity10: "rgba(203, 203, 203, 1)", //#CBCBCB
 
-  BackgroundGrayOpacity10: "rgba(250, 250, 250, 1)",
+  BackgroundGrayOpacity10: "rgba(250, 250, 250, 1)", //#FAFAFA
 
   //   CoverBlackOpacity07: "rgba(51, 51, 51, 0.7)",
   CoverGreenOpacity05: "rgba(75, 86, 75, 0.5)", //이미지 위에 덮을 색상
@@ -82,6 +82,11 @@ const button = {
       fontSize: "24rem",
       padding: "0 40rem",
     },
+    xl: {
+      height: "50rem",
+      fontSize: "26rem",
+      padding: "0 40rem",
+    },
   },
   theme: {
     normal: {
@@ -102,6 +107,16 @@ const button = {
       disabled: {
         color: colors.White,
         background: colors.Gray300Opacity10,
+      },
+    },
+    text: {
+      color: colors.TextOpacity10,
+      background: colors.Transparent,
+      border: "none",
+      padding: "0",
+      hover: {
+        color: colors.TextOpacity10,
+        background: colors.Transparent,
       },
     },
   },
@@ -152,6 +167,12 @@ const icon = {
     },
     xxxl: {
       width: "56rem",
+    },
+    xxxxl: {
+      width: "64rem",
+    },
+    xxxxxl: {
+      width: "80rem",
     },
   },
   theme: {

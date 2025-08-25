@@ -19,6 +19,13 @@ const Button = forwardRef(
         ref
     ) => {
         const navigate = useNavigate();
+        
+        const onClickBtn = (e) => {
+            onClick && onClick(e);
+            to && navigate(to);
+            e.stopPropagation();
+        };
+
         return (
             <Wrapper
             className={className}
@@ -27,10 +34,7 @@ const Button = forwardRef(
             width={width}
             bg={bg}
             iconType={icon}
-            onClick={(e) => {
-                to ? navigate(to) : onClick && onClick(e);
-                e.stopPropagation();
-            }}
+            onClick={(e) => onClickBtn(e)}
         >
             {icon ? <Icon type={icon} size={size} /> : children}
             </Wrapper>
